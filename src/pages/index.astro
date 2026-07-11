@@ -121,9 +121,13 @@ const siteUrl = (path: string) => absoluteUrl(path, Astro.site);
 				))
 			}
 
-			<div class="archive-link" style={`--i: ${rest.length + 1}`}>
-				<a data-astro-prefetch href={withBase("/writings/")}>See all {archiveCount} writings →</a>
-			</div>
+			{archiveCount > TIMELINE_LIMIT && (
+				<div class="archive-link" style={`--i: ${rest.length + 1}`}>
+					<a data-astro-prefetch href={withBase("/writings/")}>
+						See all {archiveCount} {archiveCount === 1 ? "writing" : "writings"} →
+					</a>
+				</div>
+			)}
 		</div>
 	</section>
 	<!--
