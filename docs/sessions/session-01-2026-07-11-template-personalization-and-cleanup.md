@@ -51,22 +51,34 @@ lessons, poetry, occasional tech — with everything promotional or unused strip
   biome, deduped a giscus CSS property. `pnpm lint` now passes with 0 errors;
   `astro check` is at 0 errors / 0 warnings.
 
+**Identity / placeholder copy (late-session additions)**
+
+- Set `author: "Johnny"` (`c73b780`).
+- Purged all remaining template placeholder copy (`14cb069`): site `description`
+  rewritten in the journal's voice; `profile` trimmed to `name: "Johnny"` +
+  real GitHub (john doe / example.com fields dropped — About page and schema
+  hide absent fields); About page rewritten around what plain is; demo writings
+  de-templated (hello-world reframed as a formatting reference with "Notes to
+  self", writing-with-markdown says "this site" not "this template"). Built
+  pages scan clean of template phrases. Only intentional Sienna mentions
+  remain: the hidden footer credit and its config comment.
+
 ## What remains
 
 No formal plan doc exists yet — this list is relative to the implicit goal of
 launching the journal publicly.
 
-- **Placeholder identity**: `siteConfig` still has `author: "Your Name"` and the
-  John Doe profile (example.com email/GitHub/LinkedIn, missing `avatar.png`).
-  These ship in page meta and the About page — replace before going live.
-- **Hero text**: `description` is still the template's "Replace this paragraph…"
-  copy; the example quotes are stand-ins for the user's own.
+- **Profile extras**: no email published (deliberate — user's call whether to add
+  `profile.email`); no avatar; hero example quotes are still stand-ins for the
+  user's own.
 - **No deploy pipeline**: workflows were purged deliberately. When ready, restore
   `deploy.yml` from git history (pre-`a75d228`) or point a host at the repo.
-- **Real content**: both remaining posts are demos; the About page is template copy.
+- **Real content**: both remaining writings are formatting references, not real
+  entries; About page is a first draft in the journal's voice.
 - **Undecided**: post-page tags (kept for now, not clickable); ShareButtons on posts
   (kept — flagged as possibly "promotional"); repo folder is still named `hello`
-  locally; name was still being contemplated when "plain" was chosen.
+  locally; `public/social-card.png` (fallback OG image) is still the template's
+  placeholder artwork.
 
 ## Observations
 
@@ -76,7 +88,7 @@ launching the journal publicly.
   left untouched.
 - `gh` has two accounts logged in (techbasesolutions, johnnysedh3lllo);
   johnnysedh3lllo is now the active one and owns the `plain` repo.
-- OG images still include author name and reading time in their byline — fine, but
-  they'll show "John Doe" until the profile is filled in.
+- OG images include author name and reading time in their byline — now "By Johnny"
+  since the profile was filled in.
 - Old template deploys may still exist on GitHub Pages under previous repos; deleting
   those is a manual GitHub-settings step.
