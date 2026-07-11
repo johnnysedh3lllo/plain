@@ -1,14 +1,10 @@
 ---
 title: About
-description: A short introduction. Replace this in src/content/page/about.md.
+description: Who writes plain, and why it exists.
 ---
 
-This is the About page. It's a markdown file at `src/content/page/about.md` — edit it freely. The shape is intentionally unstructured so you can write a paragraph, a list, a CV, or whatever fits.
+**plain** is an open journal. A place to write about experiences, things I'm interested in, lessons I've learned, things I've realised to be true, some poetry, and the occasional bit of tech.
 
-A few example bullets to get going:
+I'm Johnny. I write here for whoever's scrolling the internet looking for an answer — the kind I once went looking for myself — hoping they find it in something I've lived through.
 
-- 👋 One-line intro — what you do, where, since when.
-- 🛠 The tools you reach for first.
-- 📝 What you tend to write about here.
-
-Find me on [GitHub](https://github.com/example), [LinkedIn](https://www.linkedin.com/in/example/), or by [email](mailto:john@example.com).
+Find me on [GitHub](https://github.com/johnnysedh3lllo).

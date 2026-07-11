@@ -1,11 +1,11 @@
 ---
 title: "Hello, world"
 publishDate: 2026-03-01
-description: "A first post — and a quick tour of what the writing template can render."
+description: "A first entry — and a quick tour of what writings here can render."
 tags: [ intro, demo, guide ]
 ---
 
-Welcome. This is the first post in your new blog. Replace it (or delete it) when you write your first real post.
+Welcome. This is the first entry — kept around as a formatting reference until the real writing starts.
 
 ## Headings, lists, links
 
@@ -56,9 +56,8 @@ $$
 
 You can use *emphasis* and **strong** the usual way.
 
-## What's next
+## Notes to self
 
-- Edit `src/site.config.ts` with your name, profile, and (optionally) Giscus comment IDs.
-- Replace `src/content/page/about.md` with your own bio.
-- Drop new posts into `src/content/post/` — the filename becomes the URL slug.
-- See the README for full setup and customization steps.
+- New writings go in `src/content/post/` — the filename becomes the URL slug.
+- Site-wide settings (title, quotes, profile) live in `src/site.config.ts`.
+- The README covers the rest.

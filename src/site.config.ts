@@ -4,7 +4,7 @@ import type { AstroExpressiveCodeOptions } from "astro-expressive-code";
 export const siteConfig: SiteConfig = {
 	author: "Johnny",
 	description:
-		"A minimal personal blog & writing space, built with Astro. Notes on whatever I happen to be thinking about — usually some mix of code, design, and the occasional half-formed idea. Replace this paragraph in src/site.config.ts to make the site your own.",
+		"An open journal. Experiences, lessons learned, things I've realised to be true, some poetry, and the occasional bit of tech — written for whoever's looking for an answer and happens to find it here.",
 	// Home hero: add quotes here and a random one shows on every reload,
 	// styled as a blockquote with its attribution. Leave the array empty
 	// to show `description` above instead.
@@ -32,16 +32,10 @@ export const siteConfig: SiteConfig = {
 	// Keeps the "🚀 Powered by Astro Sienna" credit (https://github.com/AnjayGoel/astro-sienna)
 	// out of the rendered footer; the markup lives on in Footer.astro.
 	hideThemeCredit: true,
+	// Every field besides `name` is optional — absent ones are hidden site-wide.
 	profile: {
-		name: "John Doe",
-		email: "john@example.com",
-		github: "https://github.com/example",
-		linkedin: "https://www.linkedin.com/in/example/",
-		jobTitle: "Software Engineer",
-		employer: "Example Inc.",
-		employerUrl: "https://example.com",
-		alumni: "Example University",
-		avatar: "/avatar.png",
+		name: "Johnny",
+		github: "https://github.com/johnnysedh3lllo",
 	},
 	// Uncomment & fill in to enable Giscus comments on every post.
 	// comments: {

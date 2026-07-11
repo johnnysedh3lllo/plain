@@ -1,7 +1,7 @@
 ---
 title: "Writing with markdown"
 publishDate: 2026-02-20
-description: "A short guide to the markdown features wired into this template — cover images, code, math, footnotes, and admonitions."
+description: "A short guide to the markdown features wired into this site — cover images, code, math, footnotes, and admonitions."
 tags: [ guide, writing, markdown ]
 ---
 
