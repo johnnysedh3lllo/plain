@@ -1,16 +1,10 @@
 ---
-import { showcase } from "@/data/showcase";
 import { menuLinks, siteConfig } from "@/site-config";
 import { withBase } from "@/utils/path";
 import ThemeToggle from "../ThemeToggle.astro";
 
 const url = new URL(Astro.request.url);
 const wordmark = siteConfig.title;
-
-const visibleMenuLinks = menuLinks.filter((link) => {
-	if (link.path === "/showcase/" && showcase.length === 0) return false;
-	return true;
-});
 
 const isActive = (path: string) => {
 	const target = withBase(path);
@@ -31,7 +25,7 @@ const isActive = (path: string) => {
 	<div class="header-right">
 		<nav class="nav" aria-label="Primary">
 			{
-				visibleMenuLinks.map((link) => (
+				menuLinks.map((link) => (
 					<a
 						aria-current={isActive(link.path) ? "page" : false}
 						class:list={[{ active: isActive(link.path) }]}

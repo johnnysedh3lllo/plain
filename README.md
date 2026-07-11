@@ -8,13 +8,13 @@ template (MIT).
 
 ## Commands
 
-| Command        | What it does                                 |
-|----------------|----------------------------------------------|
-| `pnpm dev`     | Start the dev server with HMR                |
-| `pnpm build`   | Type-check, build, and run Pagefind indexing |
-| `pnpm preview` | Preview the production build locally         |
-| `pnpm format`  | Run Biome and Prettier                       |
-| `pnpm lint`    | Lint with Biome                              |
+| Command        | What it does                         |
+|----------------|--------------------------------------|
+| `pnpm dev`     | Start the dev server with HMR        |
+| `pnpm build`   | Type-check and build                 |
+| `pnpm preview` | Preview the production build locally |
+| `pnpm format`  | Run Biome and Prettier               |
+| `pnpm lint`    | Lint with Biome                      |
 
 ## Writing
 
@@ -35,15 +35,14 @@ The about page is markdown at `src/content/page/about.md`.
 
 ## Configuration
 
-- `src/site.config.ts` — title, description, hero quotes, profile, optional comments/analytics.
+- `src/site.config.ts` — title, description, hero quotes, profile, optional Giscus comments.
 - `astro.config.ts` — `site` is the deployed origin (canonical URLs, sitemap, RSS, OG images).
 - `src/styles/global.css` — design tokens (accent colour, surfaces, fonts) for light and dark themes.
 
 ## Deploying
 
-Static output in `dist/`. The bundled `.github/workflows/deploy.yml` deploys to GitHub Pages on push to `main` and
-handles the base path automatically — the only manual step is **Settings → Pages → Source: GitHub Actions**. For a
-subpath on any other host, build with `BASE_PATH=/sub pnpm build`.
+Static output in `dist/` — host it anywhere that serves files. When hosting under a subpath (e.g. a GitHub Pages
+project site), build with `BASE_PATH=/sub pnpm build`.
 
 ## License
 

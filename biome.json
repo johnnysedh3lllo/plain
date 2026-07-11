@@ -26,6 +26,11 @@
 			"semicolons": "always"
 		}
 	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
+		}
+	},
 	"vcs": {
 		"clientKind": "git",
 		"enabled": true,

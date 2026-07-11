@@ -3,14 +3,6 @@ import type { AstroExpressiveCodeOptions } from "astro-expressive-code";
 
 export const siteConfig: SiteConfig = {
 	author: "Your Name",
-	date: {
-		locale: "en-US",
-		options: {
-			day: "numeric",
-			month: "short",
-			year: "numeric",
-		},
-	},
 	description:
 		"A minimal personal blog & writing space, built with Astro. Notes on whatever I happen to be thinking about — usually some mix of code, design, and the occasional half-formed idea. Replace this paragraph in src/site.config.ts to make the site your own.",
 	// Home hero: add quotes here and a random one shows on every reload,
@@ -58,11 +50,6 @@ export const siteConfig: SiteConfig = {
 	// 	category: "General",
 	// 	categoryId: "...",
 	// },
-	// Uncomment to enable analytics. Both providers load via Partytown.
-	// analytics: {
-	// 	googleAnalyticsId: "G-XXXXXXX",
-	// 	goatcounterUrl: "https://your-handle.goatcounter.com/count",
-	// },
 };
 
 export const menuLinks: { path: string; title: string }[] = [
@@ -71,10 +58,6 @@ export const menuLinks: { path: string; title: string }[] = [
 		path: "/writings/",
 		title: "Writings",
 	},
-	// {
-	// 	path: "/showcase/",
-	// 	title: "Showcase",
-	// },
 	{
 		path: "/about/",
 		title: "About",

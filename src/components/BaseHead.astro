@@ -15,9 +15,6 @@ const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const socialImageURL = absoluteUrl(ogImage ? ogImage : "/social-card.png", Astro.site);
 
-const analytics = siteConfig.analytics;
-const gaId = analytics?.googleAnalyticsId;
-const goatcounter = analytics?.goatcounterUrl;
 ---
 
 <meta charset="utf-8"/>
@@ -77,32 +74,5 @@ const goatcounter = analytics?.goatcounterUrl;
 
 <link href={withBase("/rss.xml")} rel="alternate" title={siteConfig.title} type="application/rss+xml"/>
 
-{
-    siteConfig.webmentions && (
-    <>
-        <link href={siteConfig.webmentions.link} rel="webmention"/>
-        {siteConfig.webmentions.pingback && (
-                <link href={siteConfig.webmentions.pingback} rel="pingback"/>
-        )}
-    </>
-        )
-    }
-
 <meta content={Astro.generator} name="generator"/>
-
-{gaId && (
-    <>
-        <script is:inline type="text/partytown" async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
-        <script is:inline type="text/partytown" set:html={`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '${gaId}');
-`}></script>
-    </>
-)}
-{goatcounter && (
-    <script is:inline type="text/partytown" data-goatcounter={goatcounter}
-            async src="//gc.zgo.at/count.js"></script>
-)}
 

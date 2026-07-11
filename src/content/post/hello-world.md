@@ -58,7 +58,7 @@ You can use *emphasis* and **strong** the usual way.
 
 ## What's next
 
-- Edit `src/site.config.ts` with your name, profile, and (optionally) Giscus and analytics IDs.
+- Edit `src/site.config.ts` with your name, profile, and (optionally) Giscus comment IDs.
 - Replace `src/content/page/about.md` with your own bio.
 - Drop new posts into `src/content/post/` — the filename becomes the URL slug.
 - See the README for full setup and customization steps.

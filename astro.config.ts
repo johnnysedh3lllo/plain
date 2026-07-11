@@ -3,13 +3,11 @@ import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import expressiveCode from "astro-expressive-code";
-import icon from "astro-icon";
 import robotsTxt from "astro-robots-txt";
 import webmanifest from "astro-webmanifest";
 import { defineConfig } from "astro/config";
 import { expressiveCodeOptions } from "./src/site.config";
 import { siteConfig } from "./src/site.config";
-import partytown from "@astrojs/partytown";
 
 import remarkDirective from "remark-directive";
 import remarkMath from "remark-math";
@@ -21,29 +19,20 @@ import rehypeExternalLinks from "rehype-external-links";
 import rehypeKatex from "rehype-katex";
 import rehypeUnwrapImages from "rehype-unwrap-images";
 
-// Defaults to root; the deploy workflow sets BASE_PATH for subpath hosts
-// (GitHub Pages project sites). See "Base path" in the README.
+// Defaults to root; set BASE_PATH when hosting under a subpath
+// (e.g. BASE_PATH=/plain for a GitHub Pages project site).
 const BASE_PATH = process.env.BASE_PATH || "/";
 const START_URL = BASE_PATH.endsWith("/") ? BASE_PATH : `${BASE_PATH}/`;
 
 export default defineConfig({
 	site: "https://johnnysedh3lllo.github.io",
 	base: BASE_PATH,
-	image: {
-		domains: ["webmention.io"],
-	},
 	output: "static",
 	build: {
 		inlineStylesheets: "always",
 	},
 	integrations: [
-		partytown({
-			config: {
-				forward: ["dataLayer.push"],
-			},
-		}),
 		expressiveCode(expressiveCodeOptions),
-		icon(),
 		sitemap({
 			changefreq: "weekly",
 			priority: 0.7,
