@@ -62,6 +62,10 @@ lessons, poetry, occasional tech — with everything promotional or unused strip
   self", writing-with-markdown says "this site" not "this template"). Built
   pages scan clean of template phrases. Only intentional Sienna mentions
   remain: the hidden footer credit and its config comment.
+- Replaced the template's placeholder brand images with the rings mark rendered
+  via resvg: `public/social-card.png` (1200×630 fallback OG image) and
+  `public/icon.png` (512px favicon fallback / PWA-icon source — webmanifest
+  regenerates apple-touch-icon and icon-192/512 from it at build).
 
 ## What remains
 
@@ -77,8 +81,7 @@ launching the journal publicly.
   entries; About page is a first draft in the journal's voice.
 - **Undecided**: post-page tags (kept for now, not clickable); ShareButtons on posts
   (kept — flagged as possibly "promotional"); repo folder is still named `hello`
-  locally; `public/social-card.png` (fallback OG image) is still the template's
-  placeholder artwork.
+  locally.
 
 ## Observations
 
