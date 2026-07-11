@@ -20,7 +20,9 @@ const isActive = (path: string) => {
 ---
 
 <header class="site-header" id="main-header">
-	<a href={withBase("/")} class="wordmark">{wordmark}</a>
+	<a href={withBase("/")} class="wordmark" aria-label={`${wordmark} — home`}>
+		<span class="dot" aria-hidden="true"></span>
+	</a>
 	<div class="header-right">
 		<nav class="nav" aria-label="Primary">
 			{
@@ -43,21 +45,31 @@ const isActive = (path: string) => {
 <style>
 	.site-header {
 		display: flex;
-		align-items: baseline;
+		align-items: center;
 		justify-content: space-between;
 		gap: 24px;
 		margin-bottom: 72px;
 	}
 	.wordmark {
-		font-family: var(--font-serif);
-		font-size: 17px;
-		font-weight: 500;
-		letter-spacing: -0.01em;
+		display: inline-flex;
+		align-items: center;
 		color: hsl(var(--theme-text));
-		transition: color 0.2s ease, border-color 0.2s ease;
+		transition: color 0.2s ease;
+	}
+	.wordmark .dot {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: currentColor;
+		transition: background-color 0.2s ease;
 	}
 	.wordmark:hover {
 		color: hsl(var(--theme-accent));
+	}
+	.wordmark:focus-visible {
+		outline: 2px solid hsl(var(--theme-accent));
+		outline-offset: 4px;
+		border-radius: 50%;
 	}
 	.header-right {
 		display: flex;
@@ -130,9 +142,6 @@ const isActive = (path: string) => {
 		.site-header {
 			margin-bottom: 28px;
 			row-gap: 12px;
-		}
-		.wordmark {
-			font-size: 16px;
 		}
 		.nav {
 			gap: 18px;
