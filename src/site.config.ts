@@ -36,7 +36,7 @@ export const siteConfig: SiteConfig = {
 	lang: "en-US",
 	ogLocale: "en_US",
 	sortPostsByUpdatedDate: false,
-	title: "hello",
+	title: "plain",
 	// Keeps the "🚀 Powered by Astro Sienna" credit (https://github.com/AnjayGoel/astro-sienna)
 	// out of the rendered footer; the markup lives on in Footer.astro.
 	hideThemeCredit: true,
