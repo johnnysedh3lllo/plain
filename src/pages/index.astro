@@ -9,7 +9,9 @@ import { Schema } from "astro-seo-schema";
 
 const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts);
-const TIMELINE_LIMIT = 5;
+// Keep the home page roughly one viewport tall no matter how many
+// writings exist — everything else lives behind the "See all" link.
+const TIMELINE_LIMIT = 3;
 const timelinePosts = allPostsByDate.slice(0, TIMELINE_LIMIT);
 const featured = timelinePosts[0];
 const rest = timelinePosts.slice(1);
