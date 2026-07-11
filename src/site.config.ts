@@ -13,11 +13,12 @@ export const siteConfig: SiteConfig = {
 	},
 	description:
 		"A minimal personal blog & writing space, built with Astro. Notes on whatever I happen to be thinking about — usually some mix of code, design, and the occasional half-formed idea. Replace this paragraph in src/site.config.ts to make the site your own.",
-	// Home hero: add quotes here and a random one shows on every reload.
-	// Leave the array empty to show `description` above instead.
+	// Home hero: add quotes here and a random one shows on every reload,
+	// styled as a blockquote with its attribution. Leave the array empty
+	// to show `description` above instead.
 	// heroQuotes: [
-	// 	"A quote that means something to me.",
-	// 	"Another one, shown at random.",
+	// 	{ text: "A quote that means something to me.", author: "Someone Wise" },
+	// 	{ text: "Another one, in my own words." },
 	// ],
 	heroQuotes: [],
 	lang: "en-US",

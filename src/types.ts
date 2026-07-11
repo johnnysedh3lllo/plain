@@ -43,6 +43,12 @@ export interface AnalyticsConfig {
 	goatcounterUrl?: string;
 }
 
+export interface HeroQuote {
+	text: string;
+	/** Who said it; rendered as "— Name". Omit for your own words. */
+	author?: string;
+}
+
 export interface SiteConfig {
 	/** Site-wide display name; fallback for profile.name. */
 	author: string;
@@ -55,7 +61,7 @@ export interface SiteConfig {
 	 * Quotes for the home hero. When non-empty, a random one is shown on each
 	 * page load instead of `description` (which stays the SEO/meta text).
 	 */
-	heroQuotes?: string[];
+	heroQuotes?: HeroQuote[];
 	lang: string;
 	ogLocale: string;
 	sortPostsByUpdatedDate: boolean;
