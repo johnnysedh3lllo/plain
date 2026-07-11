@@ -16,11 +16,23 @@ export const siteConfig: SiteConfig = {
 	// Home hero: add quotes here and a random one shows on every reload,
 	// styled as a blockquote with its attribution. Leave the array empty
 	// to show `description` above instead.
-	// heroQuotes: [
-	// 	{ text: "A quote that means something to me.", author: "Someone Wise" },
-	// 	{ text: "Another one, in my own words." },
-	// ],
-	heroQuotes: [],
+	heroQuotes: [
+		{
+			text: "It is not that we have a short time to live, but that we waste a lot of it.",
+			author: "Seneca",
+		},
+		{
+			text: "Very little is needed to make a happy life; it is all within yourself, in your way of thinking.",
+			author: "Marcus Aurelius",
+		},
+		{
+			text: "How vain it is to sit down to write when you have not stood up to live.",
+			author: "Henry David Thoreau",
+		},
+		{
+			text: "Start before you feel ready. You will never feel ready.",
+		},
+	],
 	lang: "en-US",
 	ogLocale: "en_US",
 	sortPostsByUpdatedDate: false,
