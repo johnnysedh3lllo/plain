@@ -1,0 +1,47 @@
+<button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme">
+	<span class="icon" aria-hidden="true"></span>
+</button>
+
+<style is:global>
+	.theme-toggle {
+		display: inline-block;
+		padding: 0;
+		background: transparent;
+		border: 0;
+		color: hsl(var(--theme-text-muted));
+		font-family: var(--font-sans);
+		line-height: 1;
+		cursor: pointer;
+		transition: color 0.2s ease;
+	}
+	.theme-toggle:hover {
+		color: hsl(var(--theme-accent));
+	}
+	.theme-toggle:focus-visible {
+		outline: 2px solid hsl(var(--theme-accent));
+		outline-offset: 3px;
+		border-radius: 3px;
+	}
+
+	.theme-toggle .icon {
+		display: inline-block;
+		width: 1em;
+		font-size: 15px;
+		text-align: center;
+	}
+	.theme-toggle .icon::before { content: "☾"; }
+	[data-theme="dark"] .theme-toggle .icon::before { content: "☀"; }
+</style>
+
+<script>
+	const r = document.documentElement;
+	const btn = document.getElementById("theme-toggle") as HTMLButtonElement | null;
+	if (btn) {
+		btn.addEventListener("click", () => {
+			const next = r.dataset.theme === "dark" ? "light" : "dark";
+			r.dataset.theme = next;
+			try { localStorage.setItem("theme", next); } catch {}
+			document.dispatchEvent(new CustomEvent("theme-change", { detail: { theme: next } }));
+		});
+	}
+</script>
