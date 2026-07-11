@@ -21,7 +21,12 @@ const isActive = (path: string) => {
 
 <header class="site-header" id="main-header">
 	<a href={withBase("/")} class="wordmark" aria-label={`${wordmark} — home`}>
-		<span class="dot" aria-hidden="true"></span>
+		<svg class="mark" aria-hidden="true" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5">
+			<circle cx="14" cy="14" r="12.5" />
+			<circle cx="14" cy="14" r="8.75" />
+			<circle cx="14" cy="14" r="5" />
+			<circle cx="14" cy="14" r="1.75" fill="currentColor" stroke="none" />
+		</svg>
 	</a>
 	<div class="header-right">
 		<nav class="nav" aria-label="Primary">
@@ -56,12 +61,10 @@ const isActive = (path: string) => {
 		color: hsl(var(--theme-text));
 		transition: color 0.2s ease;
 	}
-	.wordmark .dot {
-		width: 12px;
-		height: 12px;
-		border-radius: 50%;
-		background: currentColor;
-		transition: background-color 0.2s ease;
+	.wordmark .mark {
+		display: block;
+		width: 22px;
+		height: 22px;
 	}
 	.wordmark:hover {
 		color: hsl(var(--theme-accent));
