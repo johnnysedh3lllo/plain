@@ -127,7 +127,8 @@ const isActive = (path: string) => {
 			gap: 22px;
 			font-size: 13px;
 			flex-wrap: wrap;
-			justify-content: flex-start;
+			/* Right-aligned on mobile — closer to the thumb. */
+			justify-content: flex-end;
 		}
 		.nav a {
 			/* Add top tap padding; desktop rule keeps the indicator space below. */
