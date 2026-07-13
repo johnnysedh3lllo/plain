@@ -1,4 +1,4 @@
-# plain
+# barelake
 
 An open journal. Experiences, lessons learned, things I've realised to be true, some poetry, and the occasional bit of
 tech — written for whoever's scrolling the internet looking for an answer and happens to find it here.

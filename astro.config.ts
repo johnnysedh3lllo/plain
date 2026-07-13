@@ -20,7 +20,7 @@ import rehypeKatex from "rehype-katex";
 import rehypeUnwrapImages from "rehype-unwrap-images";
 
 // Defaults to root; set BASE_PATH when hosting under a subpath
-// (e.g. BASE_PATH=/plain for a GitHub Pages project site).
+// (e.g. BASE_PATH=/barelake for a GitHub Pages project site).
 const BASE_PATH = process.env.BASE_PATH || "/";
 const START_URL = BASE_PATH.endsWith("/") ? BASE_PATH : `${BASE_PATH}/`;
 
